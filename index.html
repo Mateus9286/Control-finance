@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+    <link rel="stylesheet" href="./styles/Buttons.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/Modal.css">
+    <link rel="stylesheet" href="./pages/home/index.css">
+  
+</head>
+<body>
+    
+     <header>
+        <picture>
+        <img class="headerLogo" src="./assets/Control Finance.png" alt="Logo">
+        </picture>
+        <button class="header_button">Registrar novo valor</button>
+     </header>
+     <div id="container" class="containerModal">
+        <section class="Modal">
+           <div class="displayFlex">
+            <h2 class="tituloModal">Registro de valor</h2>
+            <button class="fecharModal">X</button>
+           </div>
+           
+           <p class="textModal">Digite o valor e em seguida aperte no botão referente ao tipo do valor </p>
+           <form>
+           <label for="inputValor">Valor</label>
+           <input
+              id="inputValor"
+              type="number"
+              placeholder="  R$  00.00" />
+
+           <h3 class="tipoValor">Tipo de valor</h3>
+           <button type="submit" id="entrada" class="btnModal">Entrada</button>
+           <button type="submit" id="saida" class="btnModal">Saida</button>
+           <button type="submit" class="btnCancelar">Cancelar</button>
+           <button type="submit" class="btnValor">Inserir valor</button>
+         </form> 
+        </section>
+     </div>
+     <main id="app">
+     <div class="containerResumo">
+        <h2 class="tituloResumo">
+            Resumo financeiro
+        </h2>
+        <div class="contButton">
+        <button id="todos" class="btnResumo">Todos</button>
+        <button id="entradas" class="btnResumo">Entrada</button>
+        <button id="saidas" class="btnResumo">Saida</button>
+        </div>
+     </div>
+     <div class="containerSoma">
+        <h1 class="textSoma">Soma dos valores</h1>
+        <h3 id="valorTotal" class="textSoma">R$ 00.00</h3>
+     </div>
+     
+     <div id="valores"></div>
+
+    </main>
+    <script src="./scripts/modal.js"></script>
+    <script src="./pages/home/valuesData.js"></script>
+    <script src="./pages/home/index.js"></script>
+</body>
+</html>

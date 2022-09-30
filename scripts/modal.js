@@ -5,7 +5,7 @@ function mostrarModal(){
     btnAbrir.addEventListener("click",(event)=>{
         event.preventDefault()
      Modal.classList.toggle("containerModal")   
-     Modal.classList.add("flex")
+     Modal.classList.toggle("flex")
 
     })
 
@@ -18,7 +18,7 @@ function fecharModal(){
 
     btnFechar.addEventListener("click",(event)=>{
           event.preventDefault()
-        Modal.classList.add("containerModal")   
+        Modal.classList.toggle("containerModal")   
         Modal.classList.toggle("flex")
         
     })

@@ -1,7 +1,6 @@
 function renderControle() {
   const valorTodos = document.getElementById("valorTotal");
   valorTodos.innerText = "";
-  const valor = [];
   insertedValues.forEach((element) => {
     const container = document.getElementById("valores");
     const section = document.createElement("section");
@@ -22,19 +21,17 @@ function renderControle() {
     if (element.categoryID == 2) {
       button.innerText = valuesCategory[1];
     }
-    img.src = "./Entrega-Control-finance/assets/trash.png";
+    img.src = "./assets/trash.png";
     img.id = "lixeira";
 
     div.append(button, img);
     section.append(h3, div);
     container.append(section);
-
-    valor.push(element.value);
+   
   });
-  const valorTotal = valor.reduce(
-    (previousValue, currentValue) => previousValue + currentValue,
-    (initialValue = 0)
-  );
+
+  const valorTotal = insertedValues.reduce((previousValue, currentValue) => previousValue + currentValue.value,0)
+  
   valorTodos.innerText = `R$ ${valorTotal}`;
 }
 renderControle();
@@ -59,7 +56,7 @@ function templateControle(string) {
 
   h3.innerText = ` R$ ${valor}`;
   button.innerText = string;
-  img.src = "./Entrega-Control-finance/assets/trash.png";
+  img.src = "./assets/trash.png";
   img.id = "lixeira";
 
   div.append(button, img);
@@ -69,10 +66,13 @@ function templateControle(string) {
     event.preventDefault();
     container.append(section);
     const Modal = document.getElementById("container");
-    Modal.classList.add("containerModal");
     Modal.classList.toggle("flex");
+    Modal.classList.toggle("containerModal");
+    
   });
-
+  // const valorTotal = insertedValues.reduce((previousValue, currentValue) => previousValue + currentValue.value,0);
+  // const valorTodos = document.getElementById("valorTotal");
+  // valorTodos.innerText = `R$ ${valorTotal}`;
   return section;
 }
 
@@ -111,7 +111,6 @@ function capturandoDados() {
       contador.value = +input.value;
       contador.categoryID = 1;
       insertedValues.push(contador);
-      console.log(insertedValues);
     });
   });
   btnSaida.addEventListener("click", (event) => {
@@ -125,7 +124,6 @@ function capturandoDados() {
       contador.value = +input.value;
       contador.categoryID = 2;
       insertedValues.push(contador);
-      console.log(insertedValues);
     });
   });
 }
@@ -220,7 +218,7 @@ function templateDosFiltros(arr) {
   if (arr.categoryID == 2) {
     button.innerText = valuesCategory[1];
   }
-  img.src = "./Entrega-Control-finance/assets/trash.png";
+  img.src = "./assets/trash.png";
   img.id = "lixeira";
 
   div.append(button, img);
