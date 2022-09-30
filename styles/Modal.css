@@ -1,0 +1,83 @@
+.containerModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-grey-1-opacity-5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.Modal{
+    height: auto;
+    width: 90%;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--color-mode);
+    margin-bottom: 75px;
+    max-width: 500px;
+}
+
+.tituloModal{
+font-family: var(--font-family-1);
+font-size: 16px;
+font-weight: var(--font-weight-1);
+line-height: 19px;
+text-align: left;
+color: var(--color-grey-1);
+margin-bottom: 30px;
+}
+
+.textModal{
+    font-family: var(--font-family-1);
+    font-size: 14px;
+    font-weight: var(--font-weight-3);
+    line-height: 21px;
+    text-align: left;
+    color: var(--color-grey-2);
+    margin-bottom: 25px;
+}
+
+input{
+height: 44px;
+width: 100%;
+border-radius: 8px;
+border: solid 1px var(--color-grey-3);
+
+line-height: 21px;
+text-align: left;
+margin-bottom: 25px;
+}
+
+input:hover{
+    border: solid 1px var(--color-brand-1); 
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    font-family: var(--font-family-1);
+    font-size: 14px;
+    font-weight: var(--font-weight-2);
+}
+
+label{
+font-family: var(--font-family-1);
+font-size: 14px;
+font-weight: var(--font-weight-2);
+line-height: 17px;
+text-align: left;
+}
+
+.tipoValor{
+font-family: var(--font-family-1);
+font-size: 14px;
+font-weight: var(--font-weight-2);
+line-height: 17px;
+text-align: left;
+color: var(--color-grey-1);
+}

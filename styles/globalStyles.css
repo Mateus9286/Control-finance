@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@600&display=swap");
 
 * {
-  margin: 0;
+  /* margin: 0 auto; */
   padding: 0;
   box-sizing: border-box;
 }
@@ -16,9 +16,11 @@
   --color-grey-3: #adb5bd;
   --color-grey-4: #e9ecef;
   --color-grey-5: #f1f3f5;
-  --color-grey-1-opacity-5: rgba(0, 0, 0, 0.5);
+  --color-grey-1-opacity-5:  #21252960;
   --fixed-white: #ffffff;
   --color-mode: #ffffff;
+
+  --width:165px;
 
   --font-size-1: 1.25rem;
   --font-size-2: 1rem;
@@ -43,16 +45,12 @@
 
 body {
   font-family: var(--font-family-1);
-}
-
-.container {
-  max-width: 43rem;
+  padding: 16px;
   margin: 0 auto;
+  justify-content: center;
+  max-width: 75rem;
+
 }
 
-@media (max-width: 700px) {
-  .container {
-    max-width: 43rem;
-    margin: 0 1rem;
-  }
-}
+
+
