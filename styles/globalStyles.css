@@ -33,12 +33,6 @@
 
   --font-line-height-1: 150%;
 
-  --radius-1: 0.5rem;
-  --radius-2: 0.25rem;
-
-  --animation-duration: 0.2s;
-  --animation-type: ease;
-
   --font-family-1: "Inter", sans-serif;
   --font-family-2: "Nunito", sans-serif;
 }
@@ -49,6 +43,57 @@ body {
   margin: 0 auto;
   justify-content: center;
   max-width: 75rem;
+
+}
+
+header{
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 750px) {
+  
+  .header_button{
+     
+    width: var(--width);
+  }
+
+  picture{
+    width: auto;
+  }
+
+  header{
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .containerResumo {
+      margin: 160px 0 28px 0;
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+  }
+
+  .btnResumo{
+      padding: 0 20px;
+  }
+ .headerLogo{
+  margin-right: 10px;
+ }
+
+  .contButton{
+  margin-left: 40px;
+}
+
+body{
+  display: flex;
+}
+
+main{
+  width: 57%;
+}
+
 
 }
 

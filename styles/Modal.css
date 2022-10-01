@@ -81,3 +81,7 @@ line-height: 17px;
 text-align: left;
 color: var(--color-grey-1);
 }
+
+img{
+    cursor: pointer;
+}
